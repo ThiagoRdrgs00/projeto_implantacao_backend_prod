@@ -9,7 +9,6 @@ const envAllowedOrigins = (process.env.ALLOWED_ORIGINS || '')
   .filter(Boolean);
 
 const allowedOrigins = [...new Set([
-  'https://projetoimplantacaofrontenddev-production.up.railway.app',
   process.env.FRONTEND_URL,
   ...envAllowedOrigins,
 ].filter(Boolean))];
@@ -37,7 +36,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'Running without issues - Dev' });
+  res.json({ status: 'Development backend is running' });
 });
 
 app.post('/api/register', async (req, res) => {
