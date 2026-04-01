@@ -9,7 +9,6 @@ const envAllowedOrigins = (process.env.ALLOWED_ORIGINS || '')
   .filter(Boolean);
 
 const allowedOrigins = [...new Set([
-  'https://project-integracao-48929.web.app',
   'https://projetoimplantacaofrontenddev-production.up.railway.app',
   process.env.FRONTEND_URL,
   ...envAllowedOrigins,
