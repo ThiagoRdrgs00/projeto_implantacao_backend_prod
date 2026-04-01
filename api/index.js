@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'Running without issues' });
+  res.json({ status: 'Running without issues - Prod' });
 });
 
 app.post('/api/register', async (req, res) => {
